@@ -1,0 +1,50 @@
+/* Callout labels floating over the 360 view */
+.callout {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10;
+  display: none; /* toggled by JS when in view */
+}
+
+.callout-pin {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00d4ff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.7);
+  margin: 0 auto 4px;
+}
+
+.callout-text {
+  display: block;
+  background: rgba(10, 14, 20, 0.85);
+  color: #e8eef4;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 212, 255, 0.4);
+}
+
+.callout:hover .callout-text {
+  background: rgba(0, 212, 255, 0.2);
+}
+
+/* Inline video player spawned near a callout */
+.callout-player {
+  position: absolute;
+  transform: translate(-50%, 12px);
+  width: min(360px, 40vw);
+  max-height: 40vh;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #000;
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
